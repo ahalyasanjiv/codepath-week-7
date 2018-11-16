@@ -7,55 +7,55 @@ Time spent: **3** hours spent in total
 ## Pentesting Report
 
 1. (Required) WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: An unauthenticated user can make a XSS attack by adding JavaScript through the comment section of a post on a WordPress site. When the comment is viewed, the script is executed.
+  - [X] Summary: An unauthenticated user can make a XSS attack by adding JavaScript through the comment section of a post on a WordPress site. When the comment is viewed, the script is executed.
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.10
-  - [ ] GIF Walkthrough: <img src="vulnerability_01_unauthenticated_stored_cross_site_scripting_xss.gif"  width="800">
-  - [ ] Steps to recreate:
+  - [X] GIF Walkthrough: <img src="vulnerability_01_unauthenticated_stored_cross_site_scripting_xss.gif"  width="800">
+  - [X] Steps to recreate:
     - On a WordPress post, make a comment with the HTML containing XSS script below. The [64 kB] part of the comment should be filled with 64kB of text.
     - After posting, the JavaScript alert will appear when a user views the published comment.
     ```
     <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px [64 kB]'></a>
     ```
-  - [ ] Affected source code:
+  - [X] Affected source code:
     - [Source Code](https://core.trac.wordpress.org/browser/trunk/src/wp-comments-post.php)
 2. (Required) WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary:
+  - [X] Summary:
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
   - [ ] GIF Walkthrough: <img src="vulnerability_02_authenticated_stored_cross_site_scripting_xss.gif"  width="800">
-  - [ ] Steps to recreate:
+  - [X] Steps to recreate:
     - Log on as a user who has capabilities to make posts on the WordPress site and create a post with the HTML below.
     - After publishing the post, an alert will pop up when viewing the post on the site.
     ```
     <a href="[caption code=">]</a><a title=" onmouseover=alert('test') ">link</a>
     ```
-  - [ ] Affected source code:
+  - [X] Affected source code:
     - [Source Code](https://core.trac.wordpress.org/browser/trunk/src/wp-admin/post-new.php)
 3. (Required) WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
-  - [ ] Summary:
+  - [X] Summary:
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.10
-  - [ ] GIF Walkthrough: <img src="vulnerability_03_authenticated_stored_cross_site_scripting_via_image_filename.gif"  width="800">
-  - [ ] Steps to recreate:
+  - [X] GIF Walkthrough: <img src="vulnerability_03_authenticated_stored_cross_site_scripting_via_image_filename.gif"  width="800">
+  - [X] Steps to recreate:
     - As an authenticated user who can add media to a WordPress site, go to Media > Library and click 'Add New'.
     - Select an image file and edit the filename to contain a script (example given below).
     - Click 'View attachment page' and the script will execute.
     ```
     asdfghjkl<img src=a onerror=alert(document.cookie)>.jpg
     ```
-  - [ ] Affected source code:
+  - [X] Affected source code:
     - [Source Code](https://core.trac.wordpress.org/browser/trunk/src/wp-admin/media-new.php)
 4. (Optional) WordPress  4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
-  - [ ] Summary:
+  - [X] Summary:
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.13
-  - [ ] GIF Walkthrough: <img src="vulnerability_04_authenticated_stored_cross_site_scripting_in_youtube_url_embeds.gif"  width="800">
-  - [ ] Steps to recreate:
+  - [X] GIF Walkthrough: <img src="vulnerability_04_authenticated_stored_cross_site_scripting_in_youtube_url_embeds.gif"  width="800">
+  - [X] Steps to recreate:
     - As an authenticated user, go to create a new post on WordPress.
     - In an Youtube URL embed tag, add HTML code that contains an onload script (example given below).
     - After clicking 'Publish' and viewing the new post, the script will be executed.
@@ -65,19 +65,19 @@ Time spent: **3** hours spent in total
   - [ ] Affected source code:
     - [Source Code](https://core.trac.wordpress.org/browser/trunk/src/wp-admin/post-new.php)
 5. (Optional) WordPress <= 4.3 - Authenticated Shortcode Tags Cross-Site Scripting (XSS)
-  - [ ] Summary:
+  - [X] Summary:
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.5
-  - [ ] GIF Walkthrough: <img src="vulnerability_05_authenticated_shortcode_tags_cross_site_scripting_xss.gif"  width="800">
-  - [ ] Steps to recreate:
+  - [X] GIF Walkthrough: <img src="vulnerability_05_authenticated_shortcode_tags_cross_site_scripting_xss.gif"  width="800">
+  - [X] Steps to recreate:
     - As an authenticated user, go to create a new post on WordPress.
     - Create a shortcode tag with an unclosed HTML anchor tag in its caption. Close the tag outside of the tag, and then insert another HTML anchor tag that contains JavaScript (example given below).
     - After clicking 'Publish' and viewing the new post, the script will be executed when mousing over the tag.
     ```
     Test[caption width="1" caption='<a href="' ">]</a><a href="http://onMouseOver='alert(1)'">Click me</a>
     ```
-  - [ ] Affected source code:
+  - [X] Affected source code:
     - [Source Code](https://core.trac.wordpress.org/browser/trunk/src/wp-admin/post-new.php)
 
 ## Assets
