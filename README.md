@@ -72,7 +72,7 @@ Time spent: **4** hours spent in total
   - [X] GIF Walkthrough: <img src="vulnerability_05_authenticated_shortcode_tags_cross_site_scripting_xss.gif"  width="800">
   - [X] Steps to recreate:
     - As an authenticated user, go to create a new post on WordPress.
-    - Create a shortcode tag with an unclosed HTML anchor tag in its caption. Close the tag outside of the tag, and then insert another HTML anchor tag that contains JavaScript (example given below).
+    - Create a shortcode tag with an unclosed HTML anchor tag in its caption. Close the anchor tag outside of the shortcode tag, and then insert another HTML anchor tag that contains JavaScript (example given below).
     - After clicking 'Publish' and viewing the new post, the script will be executed when mousing over the tag.
     ```
     Test[caption width="1" caption='<a href="' ">]</a><a href="http://onMouseOver='alert(1)'">Click me</a>
