@@ -25,7 +25,7 @@ Time spent: **3** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: <img src="vulnerability_02_authenticated_stored_cross_site_scripting_xss.gif"  width="800">
+  - [X] GIF Walkthrough: <img src="vulnerability_02_authenticated_stored_cross_site_scripting_xss.gif"  width="800">
   - [X] Steps to recreate:
     - Log on as a user who has capabilities to make posts on the WordPress site and create a post with the HTML below.
     - After publishing the post, an alert will pop up when viewing the post on the site.
@@ -62,7 +62,7 @@ Time spent: **3** hours spent in total
     ```
     [embed src='https://youtube.com/embed/12345<svg onload=alert("Attack!")>'][/embed]
     ```
-  - [ ] Affected source code:
+  - [X] Affected source code:
     - [Source Code](https://core.trac.wordpress.org/browser/trunk/src/wp-admin/post-new.php)
 5. (Optional) WordPress <= 4.3 - Authenticated Shortcode Tags Cross-Site Scripting (XSS)
   - [X] Summary:
