@@ -96,7 +96,7 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 Describe any challenges encountered while doing the work.
 
 - Kali would often shutdown unexpectedly, which made it difficult to set up.
-- Some of the vulnerabilities had less information that others, so I had to look beyond the references provided through wpscan.
+- Some of the vulnerabilities did not have many references listed from wpscan, so there was less background information on them.
 
 ## License
 
