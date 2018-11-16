@@ -11,7 +11,7 @@ Time spent: **3** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.10
-  - [ ] GIF Walkthrough: <img src="https://imgur.com/twFvz78">
+  - [ ] GIF Walkthrough: <img src="vulnerability_01_unauthenticated_stored_cross_site_scripting_xss.gif"  width="800">
   - [ ] Steps to recreate:
     - On a WordPress post, make a comment with the HTML containing XSS script below. The [64 kB] part of the comment should be filled with 64kB of text.
     - After posting, the JavaScript alert will appear when a user views the published comment.
@@ -25,7 +25,7 @@ Time spent: **3** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
-  - [ ] GIF Walkthrough: <img src="https://imgur.com/a/1RbKvoJ">
+  - [ ] GIF Walkthrough: <img src="vulnerability_02_authenticated_stored_cross_site_scripting_xss.gif"  width="800">
   - [ ] Steps to recreate:
     - Log on as a user who has capabilities to make posts on the WordPress site and create a post with the HTML below.
     - After publishing the post, an alert will pop up when viewing the post on the site.
@@ -39,7 +39,7 @@ Time spent: **3** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.10
-  - [ ] GIF Walkthrough: <img src="https://imgur.com/ECZNcXz">
+  - [ ] GIF Walkthrough: <img src="vulnerability_03_authenticated_stored_cross_site_scripting_via_image_filename.gif"  width="800">
   - [ ] Steps to recreate:
     - As an authenticated user who can add media to a WordPress site, go to Media > Library and click 'Add New'.
     - Select an image file and edit the filename to contain a script (example given below).
@@ -54,7 +54,7 @@ Time spent: **3** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.13
-  - [ ] GIF Walkthrough: <img src="https://imgur.com/a/isW7VZG">
+  - [ ] GIF Walkthrough: <img src="vulnerability_04_authenticated_stored_cross_site_scripting_in_youtube_url_embeds.gif"  width="800">
   - [ ] Steps to recreate:
     - As an authenticated user, go to create a new post on WordPress.
     - In an Youtube URL embed tag, add HTML code that contains an onload script (example given below).
@@ -69,7 +69,7 @@ Time spent: **3** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.5
-  - [ ] GIF Walkthrough: <img src="https://imgur.com/a/Fo3cOEZ">
+  - [ ] GIF Walkthrough: <img src="vulnerability_05_authenticated_shortcode_tags_cross_site_scripting_xss.gif"  width="800">
   - [ ] Steps to recreate:
     - As an authenticated user, go to create a new post on WordPress.
     - Create a shortcode tag with an unclosed HTML anchor tag in its caption. Close the tag outside of the tag, and then insert another HTML anchor tag that contains JavaScript (example given below).
